@@ -1,19 +1,15 @@
 package main
 
 import (
-	"bytes"
-	"crypto/tls"
+	c "correo/src/factory"
 	"fmt"
-	"html/template"
-	"net/mail"
-	"net/smtp"
 )
 
 type Client struct {
 	Nombre string
 }
 func main()  {
-	from := mail.Address{"Daniela Ortiz","aleinadoh89@gmail.com"}
+	/*from := mail.Address{"Daniela Ortiz","aleinadoh89@gmail.com"}
 	to := mail.Address{"Juan Carlos Fuentes","juan.fuentes@vantilabs.com"}
 	subject := "Prueba envi\u00F3 correo"
 
@@ -97,6 +93,11 @@ func main()  {
 		fmt.Printf("Error al cerrar exritura%d\n",err.Error())
 	}
 
-
 	client.Quit()
+	*/
+	println("entro")
+	 x := c.Contexto{}
+	 fmt.Printf("segun enviar CorreoGmail= %s\n", x.EnviarMail("jejej"))
+
+
 }
