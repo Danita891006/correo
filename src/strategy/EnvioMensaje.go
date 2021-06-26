@@ -1,4 +1,7 @@
 package strategy
-type EnvioMensaje interface {
-	Enviar(string) bool
+
+import msg "correo/src/Utils"
+
+type EnvioMessageInterface interface {
+	Enviar(msg.Mensaje) bool
 }
