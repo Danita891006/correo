@@ -14,6 +14,10 @@ type Client struct {
 	Nombre string
 }
 
+func (receiver CorreoGmail) configure() {
+
+}
+
 func (receiver CorreoGmail) Enviar(mensg msg.Mensaje) bool {
 	fmt.Printf("mensage desde gmail :%s", mensg)
 
